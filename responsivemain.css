@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media screen and (min-width : 992px){
+    body{
+        min-width: 992px;
+        background-color: rgb(247, 237, 222);
+    }
+    
+    .logo{
+        padding: 5px;
+        font-size: 36px;
+    }
+
+    .main{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .photo{
+        max-width: 500px;
+        height: 350px;
+    }
+
+    .txt{
+        align-self: flex-end;
+    }
+
+}
+
+.top{ 
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    height: 7rem;
+    color: rgb(86, 85, 85);
+    background-color:  rgb(253, 233, 202);
+    padding: 5px;
+}
+
+.nav{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.nav p:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+.photo{
+    justify-self: center;
+    margin: 15px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 10px;
+}
+
+.photo:hover{
+    border: 2px solid white;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease-in-out;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
+.txt{
+    margin: 10px;
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+.footer{
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 200;
+    justify-content: space-between;
+}
+
+.bottom{
+    cursor: pointer;
+    padding-top: 20px;
+    gap: 5px;
+}
+
+.bottom h4{
+    font-size: 17px;
+    color: rgb(239, 245, 124);
+}
+
+.bottom p:hover{
+    color: rgb(57, 57, 252);
+}
+
+.bottom2{
+    align-content: center;
+    width: 100%;
+    margin-top: 60px;
+    line-height: 2;
+}
+
+@media screen and (min-width: 600px) and (max-width : 992px){
+    body{
+        min-width: 600px;
+        background-color: rgb(222, 247, 234);
+    }
+    
+    .top{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        background-color: rgb(158, 209, 183);
+    }
+
+    .logo{
+        padding: 3px;
+        font-size: 30px;
+    }
+
+    .photo{
+        max-width: 400px;
+        height: 300px;
+    }
+
+}
+
+@media screen and (max-width : 600px){
+    body{
+        max-width: 600px;
+        background-color: rgb(222, 240, 247);
+    }
+    .top{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        background-color: rgb(191, 232, 249);
+    }
+
+    .logo{
+        padding: 3px;
+        font-size: 24px;
+    }
+
+    .photo{
+        max-width: 350px;
+        height: 250px;
+    }
+
+    .bottom{
+        display: none;
+    }
+}
